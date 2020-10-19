@@ -14,8 +14,10 @@ Our purpose in applying GEM to the rotated MNIST dataset was to create a model u
 - **Convolutional Neural Network** - a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other [6]
 - **Residual Network** - an artificial neural network that may skip layers in the network in order to lessen the training needed
 - **Confusion Matrix** - a table that consists of comparisons between predicted and actual outcomes of classifications and allows for the visualization of supervised learning performance
-- **Backward transfer** - The average accuracy of each task i after each of the previous tasks are completed. <br />BWT = $\frac{1}{T - 1}$$\sum_{i=1}^{T - 1} R_{T,i} - R_{i,i}$ <br />
-- **Forward transfer** - The average accuracy of each task i before each of the previous tasks are completed. <br />FWT = $\frac{1}{T - 1}$$\sum_{i=2}^{T} R_{i-1,i} - b_{i}$ <br />
+- **Backward transfer** - The average accuracy of each task i after each of the previous tasks are completed. <br />
+BWT = $\frac{1}{T - 1}$$\sum_{i=1}^{T - 1} R_{T,i} - R_{i,i}$ <br />
+- **Forward transfer** - The average accuracy of each task i before each of the previous tasks are completed. <br />
+FWT = $\frac{1}{T - 1}$$\sum_{i=2}^{T} R_{i-1,i} - b_{i}$ <br />
 
 
 ## Setup
@@ -143,17 +145,14 @@ All results were saved in the workspace and are discussed in the next section.
 
 ## Results
 
-We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree and from 0 to 180 degree. The results seem comparative for the two scenarios.
+We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree. The results seem pretty good.
 
 #### 10 ratation tasks from 0 to 90 degree :
 - Final accuracy on the test dataset is 0.9182
 - Minimized the negative backward transfer to -0.0557
 - Achieved positive forward transfer to 0.7719
 
-#### 10 ratation tasks from 0 to 180 degree :
-- Final accuracy on the test dataset is 
-- Minimized the negative backward transfer to -0.0557
-- Achieved positive forward transfer to 0.7719
+
 
 ## Citations
 1. https://arxiv.org/pdf/1802.07569.pdf
