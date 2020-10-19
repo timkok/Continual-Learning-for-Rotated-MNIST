@@ -130,20 +130,26 @@ It is at this point that the `load_datasets` function from before is called and 
 
 After all of this, the metrics were evaluated through the forward transfer, backward transfer, and overall accuracy of the predicted versus actual results inputed in the Confusion Matrix throughout the program.
 
+## Metrics : <br />
+We calculate Average Accuracy on the test data, Backward transfer, Forward transfer. <br />
+- Notation : <br />
+R ∈ R<sup>T × T</sup> where R<sub>i,j</sub> is the test classification accuracy on task j after observing the last sample of task i.
+- Average Accuracy : $\frac{1}{T}$$\sum_{i=1}^{T} R_{T,i}$
+
 All results were saved in the workspace and are discussed in the next section.
 ## Results
 
 We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree and from 0 to 180 degree. The results seem comparative for the two scenarios.
 
 #### 10 ratation tasks from 0 to 90 degree :
-- Achieved more than 92% accuracy on the test dataset.
-- Minimized the negative backward transfer to -0.05
-- Achieved more than 77% positive forward transfer
+- Final accuracy on the test dataset is 0.9182
+- Minimized the negative backward transfer to -0.0557
+- Achieved positive forward transfer to 0.7719
 
 #### 10 ratation tasks from 0 to 180 degree :
-- Achieved more than 92% accuracy on the test dataset.
-- Minimized the negative backward transfer to -0.05
-- Achieved more than 77% positive forward transfer
+- Final accuracy on the test dataset is 
+- Minimized the negative backward transfer to -0.0557
+- Achieved positive forward transfer to 0.7719
 
 ## Citations
 1. https://arxiv.org/pdf/1802.07569.pdf
