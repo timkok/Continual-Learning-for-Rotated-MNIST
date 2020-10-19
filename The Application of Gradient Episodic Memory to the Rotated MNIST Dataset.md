@@ -14,6 +14,9 @@ Our purpose in applying GEM to the rotated MNIST dataset was to create a model u
 - **Convolutional Neural Network** - a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other [6]
 - **Residual Network** - an artificial neural network that may skip layers in the network in order to lessen the training needed
 - **Confusion Matrix** - a table that consists of comparisons between predicted and actual outcomes of classifications and allows for the visualization of supervised learning performance
+- **Backward transfer** - The average accuracy of each task i after each of the previous tasks are completed. <br />BWT = $\frac{1}{T - 1}$$\sum_{i=1}^{T - 1} R_{T,i} - R_{i,i}$ <br />
+- **Forward transfer** - The average accuracy of each task i before each of the previous tasks are completed. <br />FWT = $\frac{1}{T - 1}$$\sum_{i=2}^{T} R_{i-1,i} - b_{i}$ <br />
+
 
 ## Setup
 Most of the code is explained within the Colab Notebook's comments. Below are explained the key components of the code, and definitions of the key components of our implementation methods. 
@@ -130,13 +133,14 @@ It is at this point that the `load_datasets` function from before is called and 
 
 After all of this, the metrics were evaluated through the forward transfer, backward transfer, and overall accuracy of the predicted versus actual results inputed in the Confusion Matrix throughout the program.
 
-## Metrics : <br />
+#### Parameters:
 We calculate Average Accuracy on the test data, Backward transfer, Forward transfer. <br />
 - Notation : <br />
 R ∈ R<sup>T × T</sup> where R<sub>i,j</sub> is the test classification accuracy on task j after observing the last sample of task i.
 - Average Accuracy : $\frac{1}{T}$$\sum_{i=1}^{T} R_{T,i}$
 
 All results were saved in the workspace and are discussed in the next section.
+
 ## Results
 
 We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree and from 0 to 180 degree. The results seem comparative for the two scenarios.
