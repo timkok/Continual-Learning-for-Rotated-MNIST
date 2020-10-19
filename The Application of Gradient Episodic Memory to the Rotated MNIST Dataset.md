@@ -145,14 +145,20 @@ All results were saved in the workspace and are discussed in the next section.
 
 ## Results
 
-We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree. The results seem pretty good.
+We applied GEM algorithm on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree. The results seem pretty good. Details please see notebook file.The accuracy is calculated using a confusion matrix.
 
 #### 10 ratation tasks from 0 to 90 degree :
 - Final accuracy on the test dataset is 0.9182
 - Minimized the negative backward transfer to -0.0557
 - Achieved positive forward transfer to 0.7719
 
+Overall, the accuracy rate is robust. The above results shows that the GEM model classifies MNIST digits with high accuracy (more than 90%), demonstrates low catastrophic forgetting (low negative backward transfer), and learns new tasks without sacrificing the performance of future tasks (high positive forward transfer).
 
+GEM is known as a efficient methond of continual learning while spending less computation. Its efficiency comes from optimizing over a number of variables equal to the number of tasks instead of optimizing over a number of variables equal to the number of parameters.
+
+## Improvement
+
+**Cross Validation** will improve the accuracy rate, but we were not able to do it on Colab due to the time and memories needed. Other improving methods include **dropout** and **tuning hyperparameters**. 
 
 ## Citations
 1. https://arxiv.org/pdf/1802.07569.pdf
