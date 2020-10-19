@@ -135,7 +135,7 @@ It is at this point that the `load_datasets` function from before is called and 
 
 After all of this, the metrics were evaluated through the forward transfer, backward transfer, and overall accuracy of the predicted versus actual results inputed in the Confusion Matrix throughout the program.
 
-#### Parameters:
+#### Metrics:
 We calculate Average Accuracy on the test data, Backward transfer, Forward transfer. <br />
 - Notation : <br />
 R ∈ R<sup>T × T</sup> where R<sub>i,j</sub> is the test classification accuracy on task j after observing the last sample of task i.
