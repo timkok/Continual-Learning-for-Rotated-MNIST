@@ -133,7 +133,17 @@ After all of this, the metrics were evaluated through the forward transfer, back
 All results were saved in the workspace and are discussed in the next section.
 ## Results
 
+We ran GEM on rotated MNIST datasets for 10 ratation tasks from 0 to 90 degree and from 0 to 180 degree. The results seem comparative for the two scenarios.
 
+#### 10 ratation tasks from 0 to 90 degree :
+- Achieved more than 92% accuracy on the test dataset.
+- Minimized the negative backward transfer to -0.05
+- Achieved more than 77% positive forward transfer
+
+#### 10 ratation tasks from 0 to 180 degree :
+- Achieved more than 92% accuracy on the test dataset.
+- Minimized the negative backward transfer to -0.05
+- Achieved more than 77% positive forward transfer
 
 ## Citations
 1. https://arxiv.org/pdf/1802.07569.pdf
