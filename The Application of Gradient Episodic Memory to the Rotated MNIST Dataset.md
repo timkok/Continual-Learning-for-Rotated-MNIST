@@ -106,15 +106,15 @@ args['cuda'] = True if args['cuda'] == 'yes' else False
 args['finetune'] = True if args['finetune'] == 'yes' else False
 ```
 
-Parameters:
+#### Parameters:
 
-number of hidden neurons at each layer (n_hiddens): 100
-number of hidden layers (n_layers): 2
-n_memories (number of memories per task): 256
-memory dependency: 0.5
-number of epochs per task (n_epochs): 1
-batch_size: 10
-learning rate (lr): 0.1
+- number of hidden neurons at each layer (n_hiddens): 100
+- number of hidden layers (n_layers): 2
+- n_memories (number of memories per task): 256
+- memory dependency: 0.5
+- number of epochs per task (n_epochs): 1
+- batch_size: 10
+- learning rate (lr): 0.1
 
 The `seed` component is used to initialize the `random` settings in a few library-derived functions:
 ```
